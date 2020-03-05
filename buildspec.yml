@@ -12,6 +12,7 @@ phases:
       - echo Build started on `date`
       - cd hello-world-java
       - mvn test
+      - mvn exec:exec
   post_build:
     commands:
       - echo Build completed on `date`
