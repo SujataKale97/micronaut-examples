@@ -12,10 +12,7 @@ phases:
       - echo Build started on `date`
       - cd hello-world-java
       - mvn install
+      - aws s3 cp target/example-0.1.jar s3://lambda-func-buc
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  base-directory: target
-  files:
-    - hello-world-java/target/example-0.1.jar
