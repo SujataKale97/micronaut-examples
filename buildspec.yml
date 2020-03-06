@@ -12,10 +12,7 @@ phases:
       - echo Build started on `date`
       - apt-get update && apt-get -y install sudo
       - cd hello-world-java
-      - sudo mvn install
+      - mvn install -Dmicronaut.server.host=localhost -Dmicronaut.server.port=8080
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - hello-world-java/target/example-0.1.jar
