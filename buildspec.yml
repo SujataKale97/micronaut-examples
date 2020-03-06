@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on `date`
       - cd hello-world-java
-      - mvn install
+      - sudo mvn install
   post_build:
     commands:
       - echo Build completed on `date`
